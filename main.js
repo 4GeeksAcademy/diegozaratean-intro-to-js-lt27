@@ -69,3 +69,36 @@ function lanzarDados(){
     document.getElementById('dado1').textContent = Math.ceil(Math.random() * 6)
     document.querySelector('#dado2').innerText = Math.ceil(Math.random() * 6)
 }
+
+
+// PSEUDOCODIGO
+// Cuando seleccinoo un boton cambiar dimensiones de los dados de acuerdo a lo que indique el usuario
+// DONE - agregar dos entradas que permitan ingresar alto y ancho
+//   DONE - agregarlos en la vista(HTML)
+//   DONE -leer estas entradas en js 
+// DONE - agregar un boton que cunado le de click ejecute fancion
+// DONE - cambiar el alto de un dado
+// DONE - cambiar el ancho de un dado 
+// Juntar todo
+
+function cambiarDimensionDados(){
+    let ancho = document.getElementById('ancho').value
+    let alto = document.getElementById('alto').value
+    document.getElementById('dado1').style.height =  `${alto}px`
+    document.getElementById('dado1').style.width = `${ancho}px`
+    document.getElementById('dado2').style.height =  `${alto}px`
+    document.getElementById('dado2').style.width = `${ancho}px`
+    document.getElementById('dado1').classList.add("comodin");
+}
+
+
+// document.getElementById('bt-transformar').addEventListener('click', 
+//     cambiarDimensionDados
+// )
+
+
+
+
+
+const intervalID = setInterval(lanzarDados, 3000);
+
